@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+:root{--pink:#ff4fa3;--pink2:#ff9acb;--purple:#a98bff;--text:#fff5fb;--muted:#c8b9ca;--bg:#090510}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',sans-serif}body{overflow:hidden;background:radial-gradient(ellipse at 50% 42%,#24102e 0%,#10091c 42%,#07050d 100%)}
+button{font:inherit;cursor:pointer}.stars{position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(1px 1px at 8% 20%,#fff 98%,transparent),radial-gradient(1px 1px at 76% 18%,#fff 98%,transparent),radial-gradient(1.5px 1.5px at 44% 73%,#ffc9e8 98%,transparent),radial-gradient(1px 1px at 91% 67%,#fff 98%,transparent),radial-gradient(1px 1px at 20% 82%,#fff 98%,transparent),radial-gradient(1px 1px at 62% 48%,#fff 98%,transparent);background-size:330px 280px;opacity:.65;animation:twinkle 5s ease-in-out infinite alternate}
+.ambient{position:fixed;width:38vw;height:38vw;max-width:460px;max-height:460px;border-radius:50%;filter:blur(90px);opacity:.13;pointer-events:none}.ambient-one{background:#d82b91;top:-15%;left:-10%}.ambient-two{background:#7654df;right:-15%;bottom:-20%}
+main{position:relative;z-index:1;min-height:100svh}.screen{position:absolute;inset:0;display:none;align-items:center;justify-content:center;flex-direction:column;padding:26px 18px;text-align:center;overflow:hidden}.screen.active{display:flex;animation:appear .8s ease both}
+.welcome-card{width:min(100%,520px);padding:42px 25px;border:1px solid #ffffff20;border-radius:28px;background:linear-gradient(145deg,#ffffff0d,#ffffff04);box-shadow:0 20px 90px #0008, inset 0 0 40px #ff74bb0b;backdrop-filter:blur(12px)}
+.mini-heart{font-size:42px;color:var(--pink);text-shadow:0 0 28px #ff3c9c;animation:pulse 1.8s infinite}.eyebrow{font-size:10px;letter-spacing:3px;color:var(--pink2);font-weight:600}.welcome-card h1{font:600 clamp(48px,12vw,76px) 'Playfair Display',serif;margin:12px 0;background:linear-gradient(90deg,#fff,#ff77bb,#c5aaff);background-clip:text;color:transparent}.welcome-card h1 span,.section-header h2 span,.ending-content h2 span{color:var(--pink2)}
+.muted{color:var(--muted);font-size:13px;line-height:1.8}.primary-btn{border:1px solid #ff9acb88;background:linear-gradient(110deg,#d92e83,#8f4bd0);color:white;padding:14px 23px;border-radius:999px;margin-top:22px;box-shadow:0 8px 30px #d82e8744;transition:.25s}.primary-btn:hover{transform:translateY(-2px);box-shadow:0 12px 38px #d82e8766}.primary-btn span{margin-left:8px}.tiny{font-size:10px;color:#8f8197;margin-top:18px}.floating-heart{position:absolute;color:#ff4d9d;text-shadow:0 0 20px #ff3d9c;animation:float 6s ease-in-out infinite}.h1{top:18%;left:15%;font-size:25px}.h2{right:14%;top:28%;font-size:18px;animation-delay:1s}.h3{bottom:17%;left:25%;font-size:14px;animation-delay:2s}
+.scene-heading{width:min(100%,700px)}.scene-heading .eyebrow{margin-bottom:35px}.message-wrap{min-height:170px;display:flex;align-items:center;justify-content:center;flex-direction:column}.message-line{font-weight:700;font-size:clamp(27px,7vw,52px);line-height:1.4;color:#ff4aa5;text-shadow:0 0 10px #ff168c,0 0 35px #ed178a88;max-width:650px;animation:textIn .8s ease both}.glow-star{width:5px;height:5px;border-radius:50%;background:#ff9acb;box-shadow:0 0 12px 5px #ff4fa388,0 0 60px 20px #ff4fa344;margin-top:28px}.next-dot{position:absolute;bottom:30px;border:1px solid #ffffff44;background:#ffffff0d;color:white;width:42px;height:42px;border-radius:50%;font-size:22px}.text-btn{border:0;background:transparent;color:#d9b8d4;padding:12px}.back-btn{position:absolute;left:18px;bottom:22px;font-size:12px}
+.section-header{position:absolute;top:7%;padding:0 18px}.section-header h2,.letter-shell h2,.ending-content h2{font:600 clamp(28px,7vw,42px) 'Playfair Display',serif;margin:8px 0}.orbit-stage{position:relative;width:min(92vw,560px);height:min(64vh,520px);perspective:950px;margin-top:90px;display:grid;place-items:center}.orbit-ring{position:absolute;width:72%;height:42%;border:1px solid #ff8dc633;border-radius:50%;transform:rotateX(68deg);box-shadow:0 0 30px #ff4fa311}.orbit-items{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .15s linear}.memory-card{position:absolute;left:50%;top:50%;width:132px;height:190px;padding:9px;background:linear-gradient(145deg,#fff,#f6d9ea);color:#42263c;border-radius:9px;box-shadow:0 12px 40px #0009;transform-style:preserve-3d;overflow:hidden}.memory-card:nth-child(1){transform:translate(-50%,-50%) rotateY(0deg) translateZ(205px)}.memory-card:nth-child(2){transform:translate(-50%,-50%) rotateY(72deg) translateZ(205px)}.memory-card:nth-child(3){transform:translate(-50%,-50%) rotateY(144deg) translateZ(205px)}.memory-card:nth-child(4){transform:translate(-50%,-50%) rotateY(216deg) translateZ(205px)}.memory-card:nth-child(5){transform:translate(-50%,-50%) rotateY(288deg) translateZ(205px)}.memory-card img{width:100%;height:145px;object-fit:cover;border-radius:4px}.memory-card p{font-size:9px;margin:8px 0;font-family:'Playfair Display',serif}.placeholder-heart{height:145px;display:grid;place-items:center;font-size:65px;color:#ed3b91;background:linear-gradient(135deg,#f9d5e8,#e9c9ff)}.orbit-heart{position:absolute;font-size:35px;color:#ff4d9d;text-shadow:0 0 25px #ff4d9d;animation:pulse 1.4s infinite}.gesture-note{font-size:10px;color:#9f8ba5;margin:-2px 0 0}
+.letter-shell{width:min(100%,480px);min-height:440px;padding:27px 25px 30px;border-radius:22px;background:linear-gradient(145deg,#fff8fc,#f4dce9);color:#512c46;box-shadow:0 20px 90px #0009;position:relative;display:flex;align-items:center;flex-direction:column}.letter-shell .eyebrow{color:#b64c83}.letter-heart{font-size:43px;color:#ef438e;line-height:1.3;text-shadow:0 4px 15px #ef438e55}.letter-count{font-size:10px;letter-spacing:2px;color:#b17a9b}.letter-shell h2{color:#713653;font-size:30px}.letter-text{font:italic 15px/2 'Playfair Display',serif;min-height:100px;white-space:pre-line;color:#6d4960}.letter-shell .primary-btn{margin-top:auto}.letter-shell .text-btn{color:#9e3f75}.letter-shell .text-btn[hidden]{display:none}.ending-content{width:min(100%,500px)}.big-heart{font-size:100px;color:#ff398f;text-shadow:0 0 30px #ff398f,0 0 90px #ff398f88;animation:pulse 1.6s infinite}.ending-content h2{font-size:62px;color:#fff}.ending-note{max-width:350px;margin:15px auto;color:#e8cddd;line-height:1.9}.signature{font:italic 20px 'Playfair Display',serif;color:#ff9acb;margin-top:25px}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}@keyframes textIn{from{opacity:0;transform:translateY(16px);filter:blur(5px)}to{opacity:1;transform:none;filter:none}}@keyframes twinkle{from{opacity:.35}to{opacity:.8}}@keyframes pulse{50%{transform:scale(1.12);filter:brightness(1.3)}}@keyframes float{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-28px) rotate(10deg)}}
+@media(max-width:600px){.welcome-card{padding:35px 18px}.section-header{top:5%}.orbit-stage{height:58vh;margin-top:105px;transform:scale(.88)}.memory-card{width:118px;height:170px}.memory-card img,.placeholder-heart{height:127px}.memory-card:nth-child(n){--z:170px}.memory-card:nth-child(1){transform:translate(-50%,-50%) rotateY(0deg) translateZ(170px)}.memory-card:nth-child(2){transform:translate(-50%,-50%) rotateY(72deg) translateZ(170px)}.memory-card:nth-child(3){transform:translate(-50%,-50%) rotateY(144deg) translateZ(170px)}.memory-card:nth-child(4){transform:translate(-50%,-50%) rotateY(216deg) translateZ(170px)}.memory-card:nth-child(5){transform:translate(-50%,-50%) rotateY(288deg) translateZ(170px)}.letter-shell{min-height:420px;padding:22px 18px}.back-btn{bottom:12px}}
+
+/* Trang Ấn tượng của em về anh */
+.impression-screen{justify-content:center;gap:12px;padding-top:34px;padding-bottom:76px;overflow-y:auto}
+.impression-header{width:min(100%,650px);margin:0 auto}
+.impression-header h2{font:600 clamp(29px,7vw,43px) 'Playfair Display',serif;margin:8px 0}
+.impression-header h2 span{color:var(--pink2)}
+.impression-cards{width:min(100%,700px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:12px auto 0}
+.impression-card{border:1px solid #ffffff45;border-radius:15px;background:linear-gradient(145deg,#fff,#f5ddeb);color:#512c46;padding:9px 9px 13px;box-shadow:0 12px 35px #0008;cursor:pointer;transition:transform .25s;min-width:0}
+.impression-card:hover{transform:translateY(-5px) rotate(-1deg)}
+.impression-card img{display:block;width:100%;height:clamp(130px,25vh,220px);object-fit:cover;border-radius:8px}
+.impression-card p{font:15px/1.5 'Playfair Display',serif;margin:10px 2px 2px}
+.impression-card small{font:9px 'Be Vietnam Pro',sans-serif;color:#a14c7c;letter-spacing:1px}
+.impression-hint{font-size:11px;color:var(--muted);margin:3px 0}
+.impression-actions{display:flex;flex-direction:column;align-items:center;gap:2px}
+.memory-modal{position:fixed;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;padding:20px;background:#05020bcc;backdrop-filter:blur(9px);opacity:0;visibility:hidden;transition:.25s}
+.memory-modal.show{opacity:1;visibility:visible}
+.memory-message{position:relative;width:min(100%,430px);padding:34px 25px 28px;border:1px solid #ff83c477;border-radius:22px;background:radial-gradient(ellipse at top,#3a1230,#120713 72%);box-shadow:0 0 45px #ff4fa855}
+.memory-close{position:absolute;right:13px;top:8px;border:0;background:transparent;color:#ffc3e0;font-size:30px;cursor:pointer}
+.memory-heart{font-size:40px;color:#ff70ba}
+.memory-overline{font-size:9px;letter-spacing:3px;color:#ffabd3}
+.memory-message h3{font:600 30px 'Playfair Display',serif;color:#ff9acb}
+.memory-message p{font-size:13px;line-height:1.9;color:#ffe2f0}
+.letter-shell{max-height:82svh;overflow-y:auto}
+.letter-text{white-space:pre-line}
+@media(max-width:600px){
+ .impression-screen{justify-content:flex-start;padding-top:40px}
+ .impression-cards{grid-template-columns:1fr;max-width:330px;gap:12px}
+ .impression-card{display:grid;grid-template-columns:105px 1fr;align-items:center;text-align:left;gap:10px;padding:8px}
+ .impression-card img{height:105px}
+ .impression-card p{font-size:14px}
+ .impression-header .muted{margin-bottom:4px}
+}
+
+/* Hien lan luot tung phan tren trang An tuong khi cham man hinh */
+.impression-screen .impression-header .eyebrow,
+.impression-screen .impression-header h2,
+.impression-screen .impression-header .muted,
+.impression-screen .impression-card,
+.impression-screen .impression-hint,
+.impression-screen .impression-actions{
+ opacity:0;visibility:hidden;transform:translateY(18px) scale(.98);
+ transition:opacity .55s ease,transform .55s ease,visibility .55s;
+}
+.impression-screen .is-revealed{
+ opacity:1;visibility:visible;transform:translateY(0) scale(1);
+}
+/* Thu duoc dat trong mot tam giay can giua man hinh, noi dung can giua */
+#letters{justify-content:center;align-items:center;text-align:center;padding:24px 18px;}
+.letter-shell{margin:auto;text-align:center;justify-content:center;align-items:center;width:min(100%,500px);min-height:min(68svh,560px);padding:34px clamp(20px,5vw,42px);gap:10px;}
+.letter-shell .eyebrow,.letter-shell h2,.letter-shell .letter-count,.letter-shell .letter-text{width:100%;text-align:center;}
+.letter-shell .letter-text{max-width:390px;margin:8px auto 14px;font:italic 15px/2 'Playfair Display',serif;white-space:pre-line;overflow-wrap:anywhere;}
+.letter-shell .primary-btn{margin:12px auto 0;}
+@media(max-width:600px){.letter-shell{min-height:min(70svh,560px);padding:28px 20px;}.letter-shell .letter-text{font-size:14px;line-height:1.9;}}
+
+
+/* Dieu chinh theo yeu cau: tieu de hien san, anh lan luot xuat hien khi cham */
+.impression-screen .impression-header .eyebrow,
+.impression-screen .impression-header h2,
+.impression-screen .impression-header .muted{
+  opacity:1;visibility:visible;transform:none;
+}
+.impression-screen .impression-card,
+.impression-screen .impression-hint,
+.impression-screen .impression-actions{
+  opacity:0;visibility:hidden;transform:translateY(18px) scale(.98);
+  transition:opacity .55s ease,transform .55s ease,visibility .55s;
+}
+.impression-screen .impression-card.is-revealed,
+.impression-screen .impression-hint.is-revealed,
+.impression-screen .impression-actions.is-revealed{
+  opacity:1;visibility:visible;transform:translateY(0) scale(1);
+}
+/* Hop loi nhan can giua nhu mau tham khao */
+.memory-message{text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.memory-message h3,.memory-message p{width:100%;text-align:center;}
+.memory-message .primary-btn{align-self:center;}
+/* Nut quay lai luon nam gon o goc duoi trai cua man hinh */
+#letters>.back-btn{position:absolute;left:18px;bottom:22px;top:auto;z-index:3;font-size:12px;}
+@media(max-width:600px){
+ #letters>.back-btn{left:12px;bottom:10px;}
+ .memory-message{padding:32px 22px 26px;}
+}

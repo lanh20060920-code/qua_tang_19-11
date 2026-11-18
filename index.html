@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090510">
+  <title>Món quà 19/11 dành cho anh 💗</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <main>
+    <section class="screen active" id="welcome">
+      <div class="welcome-card">
+        <div class="mini-heart">♥</div>
+        <p class="eyebrow">MỘT MÓN QUÀ NHỎ DÀNH RIÊNG CHO ANH</p>
+        <h1>Falling <span>Love</span></h1>
+        <p class="muted">Có một điều em muốn gửi đến anh...</p>
+        <button class="primary-btn" id="openGift">Chạm để mở quà <span>♡</span></button>
+      </div>
+      <div class="floating-heart h1">♥</div><div class="floating-heart h2">♥</div><div class="floating-heart h3">♥</div>
+    </section>
+
+    <section class="screen" id="galaxy">
+      <div class="scene-heading">
+        <p class="eyebrow">19 · 11 · 2026</p>
+        <div class="message-wrap">
+          <p class="message-line" id="galaxyMessage">Chào chàng trai của em</p>
+          <div class="glow-star"></div>
+        </div>
+        <p class="muted" id="galaxyHint">Chạm màn hình để đọc tiếp</p>
+      </div>
+      <button class="text-btn back-btn" data-back="welcome">← Quay lại</button>
+      <button class="next-dot" id="nextGalaxy" aria-label="Tiếp tục">↓</button>
+    </section>
+
+    <section class="screen impression-screen" id="impression">
+      <header class="impression-header">
+        <p class="eyebrow">OUR LITTLE MEMORIES</p>
+        <h2>Ấn tượng của em về anh</h2>
+      </header>
+      <div class="impression-cards">
+        <button class="impression-card" data-memory="0">
+          <img src="assets/images/anh1.jpg" alt="Kỷ niệm thứ nhất">
+          <p>Ấn tượng đầu tiên cảm giác anh là một người rất khó gần</p><small>CHẠM ĐỂ XEM ♥</small>
+        </button>
+        <button class="impression-card" data-memory="1">
+          <img src="assets/images/anh2.jpg" alt="Kỷ niệm thứ hai">
+          <p>Khi anh trêu em, cảm thấy anh là một người rất đáng ghét</p><small>CHẠM ĐỂ XEM ♥</small>
+        </button>
+        <button class="impression-card" data-memory="2">
+          <img src="assets/images/anh3.jpg" alt="Kỷ niệm thứ ba">
+          <p>Cuối cùng là từ không thích anh thành thương anh ♥</p><small>CHẠM ĐỂ XEM ♥</small>
+        </button>
+      </div>
+      <p class="impression-hint">Mỗi khoảnh khắc đều trở thành một điều đáng nhớ.</p>
+      <div class="impression-actions">
+        <button class="primary-btn" id="toLetters">Đọc thư em viết cho anh <span>♡</span></button>
+        <button class="text-btn back-btn" data-back="welcome">← Quay lại</button>
+      </div>
+    </section>
+
+    <section class="screen" id="letters">
+      <div class="letter-shell">
+        <p class="eyebrow">A LETTER FOR YOU</p>
+        <div class="letter-heart">♥</div>
+        <p class="letter-count" id="letterCount">01 / 03</p>
+        <h2 id="letterTitle">Gửi anh,</h2>
+        <p class="letter-text" id="letterText">Chạm vào đây để mở những dòng chữ em đã chuẩn bị...</p>
+        <button class="primary-btn" id="revealLetter">Chạm để đọc thư <span>♡</span></button>
+        <button class="text-btn" id="nextLetter" hidden>Bức thư tiếp theo →</button>
+      </div>
+      <button class="text-btn back-btn" data-back="impression">← Quay lại</button>
+    </section>
+
+    <section class="screen" id="ending">
+      <div class="ending-content">
+        <div class="big-heart">♥</div>
+        <p class="eyebrow">HAPPY MEN'S DAY</p>
+        <h2>19/11 luôn<br>vui vẻ</h2>
+        <p class="ending-note">Cảm ơn anh đã đến bên em.<br>Yêu anh nhiều lắm! ♥</p>
+        <p class="signature">MỘT MÓN QUÀ NHỎ TỪ EM</p>
+        <button class="primary-btn" id="restart">Xem lại món quà</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="memory-modal" id="memoryModal" aria-hidden="true">
+    <div class="memory-message" role="dialog" aria-modal="true" aria-labelledby="memoryTitle">
+      <button class="memory-close" id="closeMemory" aria-label="Đóng">×</button>
+      <div class="memory-heart">♥</div>
+      <p class="memory-overline">ẤN TƯỢNG CỦA EM VỀ ANH</p>
+      <h3 id="memoryTitle"></h3>
+      <p id="memoryText"></p>
+      <button class="primary-btn" id="memoryOkay">Em còn điều muốn kể ♥</button>
+    </div>
+  </div>
+
+  <audio id="bgMusic" src="assets/music/nhac.mp3" preload="none" loop></audio>
+  <script src="js/app.js"></script>
+</body>
+</html>
