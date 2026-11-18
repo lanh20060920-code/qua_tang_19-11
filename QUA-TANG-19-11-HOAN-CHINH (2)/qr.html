@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tạo QR món quà 19/11</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:20px;background:radial-gradient(circle at top,#35133c,#090510 65%);color:#fff;font-family:Arial,sans-serif}
+.panel{width:min(100%,480px);padding:28px;border:1px solid #ffffff25;border-radius:24px;background:#ffffff0d;text-align:center;box-shadow:0 20px 70px #0008}
+h1{font-size:28px;color:#ff9acb}p{color:#d8c7d8;line-height:1.6;font-size:14px}
+input{width:100%;padding:14px;border:1px solid #ffffff30;border-radius:12px;background:#160d20;color:white;font-size:14px;margin:12px 0}
+button{border:0;border-radius:30px;padding:13px 22px;color:white;background:linear-gradient(110deg,#d92e83,#8f4bd0);font-weight:bold;cursor:pointer}
+#qrcode{margin:22px auto 8px;background:white;padding:14px;width:max-content;min-height:0;border-radius:12px}
+#qrcode:empty{display:none}small{color:#a994aa;display:block;margin-top:16px}
+a{color:#ffacd2}
+</style>
+</head>
+<body><main class="panel">
+<h1>♡ Mã QR dành riêng cho anh ♡</h1>
+<p>Dán đường dẫn website quà tặng đã được đăng tải lên Internet. Sau đó tạo mã QR để người nhận quét bằng điện thoại.</p>
+<input id="url" type="url" placeholder="https://ten-cua-ban.github.io/QUA-TANG-19-11/" autocomplete="url">
+<button id="make">Tạo mã QR</button>
+<div id="qrcode"></div>
+<button id="download" hidden>Tải ảnh QR PNG</button>
+<small>Không dùng địa chỉ localhost hoặc 127.0.0.1 vì điện thoại khác không truy cập được.</small>
+<p><a href="index.html">← Quay lại món quà</a></p>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+const input=document.getElementById('url'), box=document.getElementById('qrcode'), download=document.getElementById('download');
+document.getElementById('make').addEventListener('click',()=>{
+  const value=input.value.trim();
+  if(!/^https?:\/\//i.test(value)){alert('Hãy nhập đường dẫn website bắt đầu bằng https://');return;}
+  if(typeof QRCode==='undefined'){alert('Không tải được thư viện tạo QR. Hãy kiểm tra kết nối Internet rồi tải lại trang.');return;}
+  box.innerHTML=''; new QRCode(box,{text:value,width:220,height:220,colorDark:'#160d20',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.H});
+  download.hidden=false;
+});
+download.addEventListener('click',()=>{
+  const canvas=box.querySelector('canvas');
+  const img=box.querySelector('img');
+  const src=canvas?canvas.toDataURL('image/png'):img?.src;
+  if(!src)return;
+  const a=document.createElement('a');a.href=src;a.download='QR-QUA-TANG-19-11.png';a.click();
+});
+</script></body></html>
